@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: Ubuntu-18.04
+    runs-on: Ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -100,7 +100,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #dns去广告
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=y" >> .config #WIREGUARD
         echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #XRAY
-        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #V2RAY
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config #V2RAY
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         #格式如下：
