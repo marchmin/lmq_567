@@ -58,25 +58,26 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config #删除配置项CURL
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config #删除配置项ARIA
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config #删除配置项ARIA_WEB
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL/d' .config #删除配置项TRANSMISSION_WEB
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION/d' .config #删除配置项TRANSMISSION
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config #删除配置项XUPNPD
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_XRAY/d' .config #删除配置项xray
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config #删除配置项trojan
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SSOBFS/d' .config #删除配置项ssobfs
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' .config #删除配置项OPENSSL_EXE
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config #删除配置项OPENSSL_EC
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config #删除配置项OPENVPN
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config #删除配置项OPENSSH
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config #删除配置项SFTP
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config #删除配置项EAP_PEAP
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_V2RAY/d' .config #删除配置项v2ray
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config #删除配置项FTP server
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPSET/d' .config #删除配置项IPSET
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ADBYBY/d' .config #删除配置项adbyby plus+
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config #删除配置项阿里DDNS
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' .config #删除配置项内网穿透FRPC
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' .config #删除配置项内网穿透FRPS
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CADDY/d' .config #删除配置项在线文件管理服务
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALDRIVER/d' .config #删除配置项阿里云盘
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNS/d' .config #删除配置项SMARTDNS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY/d' .config #删除配置项KP广告过滤
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WYY/d' .config #删除配置项网易云解锁
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNSTO/d' .config #删除配置项ddnsto
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOM/d' .config #删除配置项ADGUARDHOM
         ######################################################################
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
@@ -95,21 +96,21 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config #CURL
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=y" >> .config #ARIA
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=y" >> .config #ARIA_WEB
-        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config #TRANSMISSION_WEB
-        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config #TRANSMISSION
-        echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=y" >> .config #XUPNPD
+        echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #xray
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #v2ray
+        echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> .config #simple-obfs混淆插件
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y" >> .config #OPENSSL_EXE
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> .config #OPENSSL_EC
         echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=y" >> .config #OPENVPN
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> .config #OPENSSH
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=y" >> .config #SFTP
-        echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=y" >> .config #EAP_PEAP
+        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOM=y" >> .config #ddnsto
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config #FTP server
         echo "CONFIG_FIRMWARE_INCLUDE_IPSET=y" >> .config #IPSET
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config #adbyby plus+
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config #内网穿透FRPC
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> .config #内网穿透FRPS
+        echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config #在线文件管理服务
+        echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=y" >> .config #阿里云盘
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> .config #KP广告过滤
         echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config #网易云解锁
