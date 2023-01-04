@@ -1,4 +1,3 @@
-include $(ROOTDIR)/coustom
 THISDIR = $(shell pwd)
 #xray_dir="xray.com/core/main"
 #export GO111MODULE=on
