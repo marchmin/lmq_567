@@ -4,14 +4,13 @@ THISDIR = $(shell pwd)
 #export GO111MODULE=on
 #export GOPROXY=https://goproxy.cn
 xray_VERSION := 1.6.1
-xray_URL := https://github.com/yuos-bit/Padavan/raw/master/trunk/user/xray/xray/v
 Xray_dir = xray-core/Xray-core-$(Xray_VERSION)/main
 ifeq ($(GITHUB_ACTION),n)
 all:download_xray build_extract build_xray
 
 download_xray:
 	( if [  ! -f $(THISDIR)/xray  ]; then \
-	curl --create-dirs -L $(xray_URL) -o $(THISDIR)/xray ; \
+	curl -O https://github.com/yuos-bit/Padavan/raw/master/trunk/user/xray/xray ; \
 	fi )
 	
 build_extract:
