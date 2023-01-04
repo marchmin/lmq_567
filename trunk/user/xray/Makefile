@@ -9,7 +9,7 @@ xray_SED_ARGS += \
 xray_SED_ARGS += \
 	s/_ "xray.com\/core\/main\/json"/\/\/ &/;
 xray_VERSION := 1.6.1
-xray_URL := https://github.com/yuos-bit/Padavan/raw/master/trunk/user/xray/xray
+xray_URL := https://github.com/yuos-bit/Padavan/raw/master/trunk/user/xray/xray/v
 
 all:download_xray build_extract build_xray
 
