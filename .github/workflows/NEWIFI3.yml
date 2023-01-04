@@ -42,37 +42,43 @@ jobs:
         cp -f configs/templates/$TNAME.config .config
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         ################################################################################################
-        #因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
+        #因不同型号配，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d' .config #删除配置项zerotier
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SSSERVER/d' .config #删除配置项ss服务
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config #删除配置项SHADOWSOCKS
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config #删除配置项CURL
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config #删除配置项ARIA
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config #删除配置项ARIA_WEB
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_XRAY/d' .config #删除配置项xray
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config #删除配置项trojan
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SSOBFS/d' .config #删除配置项ssobfs
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' .config #删除配置项OPENSSL_EXE
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config #删除配置项OPENSSL_EC
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config #删除配置项OPENVPN
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config #删除配置项OPENSSH
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config #删除配置项SFTP
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_V2RAY/d' .config #删除配置项v2ray
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPSET/d' .config #删除配置项IPSET
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config #删除配置项SHADOWSOCKS科学上网
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_V2RAY/d' .config #删除配置项v2ray执行文件
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_XRAY/d' .config #删除配置项xray执行文件
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config #删除配置项trojan执行文件
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SSOBFS/d' .config #删除配置项simple-obfs混淆插件
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ADBYBY/d' .config #删除配置项adbyby plus+
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config #删除配置项阿里DDNS
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_CADDY/d' .config #删除配置项在线文件管理服务
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALDRIVER/d' .config #删除配置项阿里云盘
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNS/d' .config #删除配置项SMARTDNS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY/d' .config #删除配置项KP广告过滤
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNS/d' .config #删除配置项smartdns
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d' .config #删除配置项adg DNS去AD
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CADDY/d' .config #删除配置项在线文件管理服务
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WYY/d' .config #删除配置项网易云解锁
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config #删除配置项阿里ddns
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNSTO/d' .config #删除配置项ddnsto
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOM/d' .config #删除配置项ADGUARDHOM
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALDRIVER/d' .config #删除配置项阿里云盘
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config #删除配置SRELAY代理
+        
         ######################################################################
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
-
+        echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
+        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SHADOWSOCKS
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #v2ray执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #xray执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #trojan执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> .config #simple-obfs混淆插件
+        echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config #adbyby plus+
+        echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> .config #KP广告过滤
+        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
+        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #adg DNS去AD
+        echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config #在线文件管理服务
+        echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config #网易云解锁
+        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里ddns
+        echo "CONFIG_FIRMWARE_INCLUDE_DDNSTO=y" >> .config #ddnsto
+        echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVERR=y" >> .config #阿里云盘
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         #格式如下：
