@@ -379,464 +379,349 @@ function show_banner(L3) {
 	show_top_status();
 }
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000
-//new MENU 2021-1-2 17:47 by xtr3mz
-var tabM0 = [
-	{ "title": "<#menu5_1_1#>", "link": "Advanced_Wireless2g_Content.asp" },
-	{ "title": "<#menu5_1_2#>", "link": "Advanced_WGuest2g_Content.asp" },
-	{ "title": "<#menu5_1_3#>", "link": "Advanced_WMode2g_Content.asp" },
-	{ "title": "<#menu5_1_4#>", "link": "Advanced_ACL2g_Content.asp" },
-	{ "title": "<#menu5_1_5#>", "link": "Advanced_WSecurity2g_Content.asp" },
-	{ "title": "<#menu5_1_6#>", "link": "Advanced_WAdvanced2g_Content.asp" }
-];
-var tabM1 = [
-	{ "title": "<#menu5_1_1#>", "link": "Advanced_Wireless_Content.asp" },
-	{ "title": "<#menu5_1_2#>", "link": "Advanced_WGuest_Content.asp" },
-	{ "title": "<#menu5_1_3#>", "link": "Advanced_WMode_Content.asp" },
-	{ "title": "<#menu5_1_4#>", "link": "Advanced_ACL_Content.asp" },
-	{ "title": "<#menu5_1_5#>", "link": "Advanced_WSecurity_Content.asp" },
-	{ "title": "<#menu5_1_6#>", "link": "Advanced_WAdvanced_Content.asp" }
-];
-
-var tabM2 = [
-	{ "title": "<#menu5_2_1#>", "link": "Advanced_LAN_Content.asp" },
-	{ "title": "<#menu5_2_2#>", "link": "Advanced_DHCP_Content.asp" },
-	{ "title": "<#menu5_2_3#>", "link": "Advanced_GWStaticRoute_Content.asp" },
-	{ "title": "<#menu5_2_4#>", "link": "Advanced_IPTV_Content.asp" },
-	{ "title": "<#menu5_2_5#>", "link": "Advanced_Switch_Content.asp" },
-	{ "title": "<#menu5_2_6#>", "link": "Advanced_WOL_Content.asp" }
-];
-var tabM3 = [
-	{ "title": "<#menu5_3_1#>", "link": "Advanced_WAN_Content.asp" },
-	{ "title": "<#menu5_3_3#>", "link": "Advanced_IPv6_Content.asp" },
-	{ "title": "<#menu5_3_4#>", "link": "Advanced_VirtualServer_Content.asp" },
-	{ "title": "<#menu5_3_5#>", "link": "Advanced_Exposed_Content.asp" },
-	{ "title": "<#menu5_3_6#>", "link": "Advanced_DDNS_Content.asp" }
-];
-var tabM4 = [
-	{ "title": "<#menu5_5_1#>", "link": "Advanced_BasicFirewall_Content.asp" },
-	{ "title": "<#menu5_5_5#>", "link": "Advanced_Netfilter_Content.asp" },
-	{ "title": "<#menu5_5_2#>", "link": "Advanced_URLFilter_Content.asp" },
-	{ "title": "<#menu5_5_3#>", "link": "Advanced_MACFilter_Content.asp" },
-	{ "title": "<#menu5_5_4#>", "link": "Advanced_Firewall_Content.asp" }
-];
-var tabM5 = [
-	{ "title": "<#menu5_4_3#>", "link": "Advanced_AiDisk_others.asp" },
-	{ "title": "<#menu5_4_1#>", "link": "Advanced_AiDisk_samba.asp" },
-	{ "title": "<#menu5_4_2#>", "link": "Advanced_AiDisk_ftp.asp" },
-	{ "title": "<#menu5_4_4#>", "link": "Advanced_Modem_others.asp" },
-	{ "title": "<#menu5_4_5#>", "link": "Advanced_Printer_others.asp" }
-];
-var tabM6 = [
-	{ "title": "<#menu5_6_2#>", "link": "Advanced_System_Content.asp" },
-	{ "title": "<#menu5_6_5#>", "link": "Advanced_Services_Content.asp" },
-	{ "title": "<#menu5_6_1#>", "link": "Advanced_OperationMode_Content.asp" },
-	{ "title": "<#menu5_6_3#>", "link": "Advanced_FirmwareUpgrade_Content.asp" },
-	{ "title": "<#menu5_6_4#>", "link": "Advanced_SettingBackup_Content.asp" },
-	{ "title": "<#menu5_6_6#>", "link": "Advanced_Console_Content.asp" }
-];
-var tabM7 = [
-	{ "title": "<#menu5_10_1#>", "link": "Advanced_Tweaks_Content.asp" },
-	{ "title": "<#menu5_10_2#>", "link": "Advanced_Scripts_Content.asp" },
-	{ "title": "<#menu5_10_3#>", "link": "Advanced_InetDetect_Content.asp" }
-];
-var tabM8 = [
-	{ "title": "<#menu5_11#>", "link": "Main_WStatus2g_Content.asp" },
-	{ "title": "<#menu5_12#>", "link": "Main_WStatus_Content.asp" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" },
-	{ "title": "", "link": "" }
-];
-var tabM9 = [
-	{ "title": "<#menu5_7_2#>", "link": "Main_LogStatus_Content.asp" },
-	{ "title": "<#menu5_7_3#>", "link": "Main_DHCPStatus_Content.asp" },
-	{ "title": "<#menu5_7_5#>", "link": "Main_IPTStatus_Content.asp" },
-	{ "title": "<#menu5_7_6#>", "link": "Main_RouteStatus_Content.asp" },
-	{ "title": "<#menu5_7_8#>", "link": "Main_CTStatus_Content.asp" }
-];
-var tabMenuHash = new HashMap();
-tabMenuHash.put('1', tabM0);
-tabMenuHash.put('2', tabM1);
-tabMenuHash.put('3', tabM2);
-tabMenuHash.put('4', tabM3);
-tabMenuHash.put('5', tabM4);
-tabMenuHash.put('6', tabM5);
-tabMenuHash.put('7', tabM6);
-tabMenuHash.put('8', tabM7);
-tabMenuHash.put('9', tabM8);
-tabMenuHash.put('10', tabM9);
-
-//Level 1 Menu in Gateway, Router mode
-//生成子菜单 /L1 sub 与 L2 sub对应
-var menuL1 = [
-	{ "title": "<#menu1#>", "link": "index.asp", "icon": "icon-home" }
-];
-if (found_app_vpnsvr()) {
-	menuL1.push({ "title": "<#menu2#>", "link": "vpnsrv.asp", "icon": "icon-retweet" });
+var tabtitle = new Array(17);
+var tablink = new Array(17);
+tabtitle[0] = new Array("", "<#menu5_1_1#>", "<#menu5_1_2#>", "<#menu5_1_3#>", "<#menu5_1_4#>", "<#menu5_1_5#>", "<#menu5_1_6#>");
+tabtitle[1] = new Array("", "<#menu5_1_1#>", "<#menu5_1_2#>", "<#menu5_1_3#>", "<#menu5_1_4#>", "<#menu5_1_5#>", "<#menu5_1_6#>");
+tabtitle[2] = new Array("", "<#menu5_2_1#>", "<#menu5_2_2#>", "<#menu5_2_3#>", "<#menu5_2_4#>", "<#menu5_2_5#>", "<#menu5_2_6#>");
+tabtitle[3] = new Array("", "<#menu5_3_1#>", "<#menu5_3_3#>", "<#menu5_3_4#>", "<#menu5_3_5#>", "<#menu5_3_6#>");
+tabtitle[4] = new Array("", "<#menu5_5_1#>", "<#menu5_5_5#>", "<#menu5_5_2#>", "<#menu5_5_3#>", "<#menu5_5_4#>");
+tabtitle[5] = new Array("", "<#menu5_4_3#>", "<#menu5_4_1#>", "<#menu5_4_2#>", "<#menu5_4_4#>", "<#menu5_4_5#>");
+tabtitle[6] = new Array("", "<#menu5_6_2#>", "<#menu5_6_5#>", "<#menu5_6_1#>", "<#menu5_6_3#>", "<#menu5_6_4#>", "<#menu5_6_6#>");
+tabtitle[7] = new Array("", "<#menu5_10_1#>", "<#menu5_10_2#>", "<#menu5_10_3#>" , "<#menu5_22_1#>");
+tabtitle[8] = new Array("", "<#menu5_11#>", "<#menu5_12#>", "WAN", "", "", "", "", "", "", "");
+tabtitle[9] = new Array("", "<#menu5_7_2#>", "<#menu5_7_3#>", "<#menu5_7_5#>", "<#menu5_7_6#>", "<#menu5_7_8#>");
+if (found_app_shadowsocks()){
+	tabtitle[10] = new Array("", "<#menu5_1_1#>","<#menu5_16_20#>");
 }
-if (found_app_vpncli()) {
-	menuL1.push({ "title": "<#menu6#>", "link": "vpncli.asp", "icon": "icon-globe" });
+if (found_app_adbyby()){
+	tabtitle[11] = new Array("", "<#menu5_20_1#>");
 }
-menuL1.push({ "title": "<#menu4#>", "link": "Main_TrafficMonitor_realtime.asp", "icon": "icon-tasks" });
-menuL1.push({ "title": "<#menu5_8#>", "link": "Advanced_System_Info.asp", "icon": "icon-random" });
-menuL1.push({ "title": "<#menu5#>", "link": "as.asp", "icon": "icon-wrench" });
+if (found_app_koolproxy()){
+	if (found_app_adbyby()){
+		tabtitle[11].push("<#menu5_26_1#>");
+	}else{
+	tabtitle[11] = new Array("", "<#menu5_26_1#>");
+	}
+}
+if (found_app_smartdns()){
+	tabtitle[12] = new Array("", "<#menu5_29#>");	
+}else{
+if (found_app_adguardhome()){
+	tabtitle[12] = new Array("", "<#menu5_29#>");
+}
+}	
+if (found_app_aliddns()){
+	tabtitle[13] = new Array("", "<#menu5_30#>");
+}else{
+if (found_app_ddnsto()){
+	tabtitle[13] = new Array("", "<#menu5_32_2#>");
+}else
+if (found_app_zerotier()){
+	tabtitle[13] = new Array("", "<#menu5_32#>");
+}else
+if (found_app_wireguard()){
+	tabtitle[13] = new Array("", "<#menu5_35_1#>");
+}
+}
+if (found_app_frp()){
+	tabtitle[14] = new Array("", "<#menu5_25_1#>");
+}
+if (found_app_caddy()){
+	tabtitle[15] = new Array("", "<#menu5_27_1#>");
+}
+if (found_app_wyy()){
+	tabtitle[16] = new Array("", "<#menu5_31_1#>");
+}
+if (found_app_aldriver()){
+	tabtitle[17] = new Array("", "<#menu5_36_1#>");
+}
+//Level 3 Tab title
+tablink[0] = new Array("", "Advanced_Wireless2g_Content.asp", "Advanced_WGuest2g_Content.asp", "Advanced_WMode2g_Content.asp", "Advanced_ACL2g_Content.asp", "Advanced_WSecurity2g_Content.asp", "Advanced_WAdvanced2g_Content.asp");
+tablink[1] = new Array("", "Advanced_Wireless_Content.asp", "Advanced_WGuest_Content.asp", "Advanced_WMode_Content.asp", "Advanced_ACL_Content.asp", "Advanced_WSecurity_Content.asp", "Advanced_WAdvanced_Content.asp");
+tablink[2] = new Array("", "Advanced_LAN_Content.asp", "Advanced_DHCP_Content.asp", "Advanced_GWStaticRoute_Content.asp", "Advanced_IPTV_Content.asp", "Advanced_Switch_Content.asp", "Advanced_WOL_Content.asp");
+tablink[3] = new Array("", "Advanced_WAN_Content.asp", "Advanced_IPv6_Content.asp", "Advanced_VirtualServer_Content.asp", "Advanced_Exposed_Content.asp", "Advanced_DDNS_Content.asp");
+tablink[4] = new Array("", "Advanced_BasicFirewall_Content.asp", "Advanced_Netfilter_Content.asp", "Advanced_URLFilter_Content.asp", "Advanced_MACFilter_Content.asp", "Advanced_Firewall_Content.asp");
+tablink[5] = new Array("", "Advanced_AiDisk_others.asp", "Advanced_AiDisk_samba.asp", "Advanced_AiDisk_ftp.asp", "Advanced_Modem_others.asp", "Advanced_Printer_others.asp");
+tablink[6] = new Array("", "Advanced_System_Content.asp", "Advanced_Services_Content.asp", "Advanced_OperationMode_Content.asp", "Advanced_FirmwareUpgrade_Content.asp", "Advanced_SettingBackup_Content.asp", "Advanced_Console_Content.asp");
+tablink[7] = new Array("", "Advanced_Tweaks_Content.asp", "Advanced_Scripts_Content.asp", "Advanced_InetDetect_Content.asp" ,"Advanced_web.asp");
+tablink[8] = new Array("", "Main_WStatus2g_Content.asp", "Main_WStatus_Content.asp", "", "", "", "", "", "", "", "");
+tablink[9] = new Array("", "Main_LogStatus_Content.asp", "Main_DHCPStatus_Content.asp", "Main_IPTStatus_Content.asp", "Main_RouteStatus_Content.asp", "Main_CTStatus_Content.asp");
+if (found_app_shadowsocks()){
+	shadowsocks_array = new Array("","Shadowsocks.asp","Shadowsocks_log.asp");
+	tablink[10] = (shadowsocks_array);
+if (found_app_adbyby()){
+	ad_array = new Array("","Advanced_adbyby.asp");
+	tablink[11] = (ad_array);
+}else if (found_app_koolproxy()){
+	kp_array = new Array("","Advanced_koolproxy.asp");
+	tablink[11] = (kp_array);
+if (found_app_smartdns()){
+	smartdns_array = new Array("","Advanced_smartdns.asp");
+	tablink[12] = (smartdns_array);
+}else if (found_app_adguardhome()){
+	adg_array = new Array("","Advanced_adguardhome.asp");
+	tablink[12] = (adg_array);
+if (found_app_aliddns()){
+	aliddns_array = new Array("","Advanced_aliddns.asp");
+	tablink[13] = (aliddns_array);
+}else if (found_app_ddnsto()){
+	ddnsto_array = new Array("","Advanced_ddnsto.asp");
+	tablink[13] = (ddnsto_array);
+}else if (found_app_zerotier()){
+	zerotier_array = new Array("","Advanced_zerotier.asp");
+	tablink[13] = (zerotier_array);	
+}else if (found_app_wireguard()){
+	wireguard_array = new Array("","Advanced_wireguard.asp");
+	tablink[13] = (wireguard_array);
+if (found_app_frp()){
+	frp_array = new Array("","Advanced_frp.asp");
+	tablink[14] = (frp_array);
+}
+if (found_app_caddy()){
+	caddy_array = new Array("","Advanced_caddy.asp");
+	tablink[15] = (caddy_array);
+}
+if (found_app_wyy()){
+	wyy_array = new Array("","Advanced_wyy.asp");
+	tablink[16] = (wyy_array);
+}
+if (found_app_aliyundrive()){
+	wyy_array = new Array("","Advanced_aliyundrive.asp");
+	tablink[17] = (aliyundrive_array);
+}
 
 //Level 2 Menu
-//sub 与 L1的sub 对应，自动显示到L1下面
-var menuL2 = [
-	{ "title": "<#menu5_11#>", "link": tabMenuHash.get('1')[0].link, index: "1" },
-	{ "title": "<#menu5_12#>", "link": tabMenuHash.get('2')[0].link, index: "2" },
-	{ "title": "<#menu5_2#>", "link": tabMenuHash.get('3')[0].link, index: "3" },
-	{ "title": "<#menu5_3#>", "link": tabMenuHash.get('4')[0].link, index: "4" },
-	{ "title": "<#menu5_5#>", "link": tabMenuHash.get('5')[0].link, index: "5" },
-	{ "title": "<#menu5_4#>", "link": tabMenuHash.get('6')[0].link, index: "6" },
-	{ "title": "<#menu5_6#>", "link": tabMenuHash.get('7')[0].link, index: "7" },
-	{ "title": "<#menu5_10#>", "link": tabMenuHash.get('8')[0].link, index: "8" },
-	{ "title": "<#menu5_9#>", "link": support_2g_radio() ? tabMenuHash.get('9')[0].link : "Main_EStatus_Content.asp", index: "9" },
-	{ "title": "<#menu5_7#>", "link": tabMenuHash.get('10')[0].link, index: "10" }
-];
+menuL2_title = new Array(17)
+menuL2_title = new Array("", "<#menu5_11#>", "<#menu5_12#>", "<#menu5_2#>", "<#menu5_3#>", "<#menu5_5#>", "<#menu5_4#>", "<#menu5_6#>", "<#menu5_10#>", "<#menu5_9#>", "<#menu5_7#>");
+if (found_app_shadowsocks()){
+	menuL2_title.push("<#menu5_16#>");
+} else menuL2_title.push("");
+if (found_app_adbyby()){
+	menuL2_title.push("<#menu5_20#>");
+}else if (found_app_koolproxy()){
+	menuL2_title.push("<#menu5_20#>");
+} else menuL2_title.push("");
 
-/* plugin menu 插件菜单 */
-if (found_app_scutclient()) {
-	var mx = { "title": "<#menu5_13#>", "link": "scutclient.asp", index: "11" };//json格式
-	var mx2 = [mx, { "title": "<#menu5_13_log#>", "link": "scutclient_log.asp" }];//显示tab，多个页面
-	menuL2.push(mx);//必须写
-	tabMenuHash.put('11', mx2);
-}
-if (found_app_dnsforwarder()) {
-	var mx = { "title": "<#menu5_15#>", "link": "dns-forwarder.asp", index: "12" };
-	var mx2 = [mx];
-	menuL2.push(mx);
-	tabMenuHash.put('12', mx2);
-}
-if (found_app_shadowsocks()) {
-	var mx = { "title": "<#menu5_16#>", "link": "Shadowsocks.asp", index: "13" };
-	var mx2 = [mx, { "title": "<#menu5_16_20#>", "link": "Shadowsocks_log.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('13', mx2);
-}
-if (found_app_mentohust()) {
-	var mx = { "title": "<#menu5_18#>", "link": "mentohust.asp", index: "14" };
-	var mx2 = [mx, { "title": "<#menu5_13_log#>", "link": "mentohust_log.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('14', mx2);
-}
-if (found_app_adbyby() && !found_app_koolproxy()) {
-	var mx = { "title": "<#menu5_20#>", "link": "Advanced_adbyby.asp", index: "15" };
-	var mx2 = [{ "title": "<#menu5_20_1#>", "link": "Advanced_adbyby.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('15', mx2);
-}
-if (!found_app_adbyby() && found_app_koolproxy()) {
-	var mx = { "title": "<#menu5_20#>", "link": "Advanced_koolproxy.asp", index: "15" };
-	var mx2 = [{ "title": "<#menu5_26_1#>", "link": "Advanced_koolproxy.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('15', mx2);
-}
-if (found_app_adbyby() && found_app_koolproxy()) {
-	var mx = { "title": "<#menu5_20#>", "link": "Advanced_adbyby.asp", index: "15" };
-	var mx2 = [{ "title": "<#menu5_20_1#>", "link": "Advanced_adbyby.asp" }, { "title": "<#menu5_26_1#>", "link": "Advanced_koolproxy.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('15', mx2);
-}
-if (found_app_smartdns() && !found_app_adguardhome()) {
-	var mx = { "title": "<#menu5_29#>", "link": "Advanced_smartdns.asp", index: "16" };
-	var mx2 = [{ "title": "<#menu5_24_1#>", "link": "Advanced_smartdns.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('16', mx2);
-}
-if (!found_app_smartdns() && found_app_adguardhome()) {
-	var mx = { "title": "<#menu5_29#>", "link": "Advanced_adguardhome.asp", index: "16" };
-	var mx2 = [{ "title": "<#menu5_28_1#>", "link": "Advanced_adguardhome.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('16', mx2);
-}
-if (found_app_smartdns() && found_app_adguardhome()) {
-	var mx = { "title": "<#menu5_29#>", "link": "Advanced_smartdns.asp", index: "16" };
-	var mx2 = [{ "title": "<#menu5_24_1#>", "link": "Advanced_smartdns.asp" }, { "title": "<#menu5_28_1#>", "link": "Advanced_adguardhome.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('16', mx2);
-}
-if (found_app_aliddns() && !found_app_ddnsto() && !found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (!found_app_aliddns() && found_app_ddnsto() && !found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_ddnsto.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_32_2#>", "link": "Advanced_ddnsto.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (!found_app_aliddns() && !found_app_ddnsto() && found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_zerotier.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_32_1#>", "link": "Advanced_zerotier.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (!found_app_aliddns() && !found_app_ddnsto() && !found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_wireguard.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_35_1#>", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
+if (found_app_smartdns()){
+	menuL2_title.push("<#menu5_29#>");
+} else if (found_app_adguardhome()){
+	menuL2_title.push("<#menu5_29#>");
+} else menuL2_title.push("");
 
-if (found_app_aliddns() && found_app_ddnsto() && !found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }, { "title": "menu5_32_2", "link": "Advanced_ddnsto.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
+if (found_app_aliddns()){
+	menuL2_title.push("<#menu5_30#>");
+} else if (found_app_ddnsto()){
+	menuL2_title.push("<#menu5_30#>");
+} else if (found_app_zerotier()){
+	menuL2_title.push("<#menu5_30#>");
+} else if (found_app_wireguard()){
+	menuL2_title.push("<#menu5_30#>");
+} else menuL2_title.push("");
+	
+if (found_app_frp()){
+	menuL2_title.push("<#menu5_25#>");
+} else menuL2_title.push("");
+	
+if (found_app_caddy()){
+	menuL2_title.push("<#menu5_27#>");
+} else menuL2_title.push("");
+	
+if (found_app_wyy()){
+	menuL2_title.push("<#menu5_31#>");
+} else menuL2_title.push("");
+	
+if (found_app_aliyundrive()){
+	menuL2_title.push("<#menu5_36#>");
+} else menuL2_title.push("");
 
-if (found_app_aliddns() && !found_app_ddnsto() && found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }, { "title": "menu5_32_1", "link": "Advanced_zerotier.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (found_app_aliddns() && !found_app_ddnsto() && !found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }, { "title": "menu5_35_1", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
+menuL2_link  = new Array("", tablink[0][1], tablink[1][1], tablink[2][1], tablink[3][1], tablink[4][1], tablink[5][1], tablink[6][1], tablink[7][1], support_2g_radio() ? tablink[8][1] : "Main_EStatus_Content.asp", tablink[9][1]);
+if (found_app_shadowsocks()){
+	menuL2_link.push(shadowsocks_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_adbyby()){
+	menuL2_link.push(ad_array[1]);
+} else if (found_app_koolproxy()){
+	menuL2_link.push(kp_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_smartdns()){
+	menuL2_link.push(smartdns_array[1]);
+} else if (found_app_adguardhome()){
+	menuL2_link.push(adg_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_aliddns()){
+	menuL2_link.push(aliddns_array[1]);
+} else if (found_app_ddnsto()){
+	menuL2_link.push(ddnsto_array[1]);
+} else if (found_app_zerotier()){
+	menuL2_link.push(zerotier_array[1]);
+} else if (found_app_wireguard()){
+	menuL2_link.push(wireguard_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_frp()){
+	menuL2_link.push(frp_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_caddy()){
+	menuL2_link.push(caddy_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_wyy()){
+	menuL2_link.push(wyy_array[1]);
+} else menuL2_link.push("");
+	
+if (found_app_aliyundrive()){
+	menuL2_link.push(aliyundrive_array[1]);
+} else menuL2_link.push("");
+	
+//Level 1 Menu in Gateway, Router mode
+menuL1_title = new Array("", "<#menu1#>", "", "<#menu2#>", "<#menu6#>", "<#menu4#>", "<#menu5_8#>", "<#menu5#>");
+menuL1_link = new Array("", "index.asp", "", "vpnsrv.asp", "vpncli.asp", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
+menuL1_icon = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-tasks", "icon-random", "icon-wrench");
 
-if (!found_app_aliddns() && found_app_ddnsto() && found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_ddnsto.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_32_2#>", "link": "Advanced_ddnsto.asp" }, { "title": "menu5_32_1", "link": "Advanced_zerotier.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (!found_app_aliddns() && found_app_ddnsto() && !found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_ddnsto.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_33_1#>", "link": "Advanced_ddnsto.asp" }, { "title": "menu5_35_1", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (!found_app_aliddns() && !found_app_ddnsto() && found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_zerotier.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_32_1#>", "link": "Advanced_zerotier.asp" }, { "title": "menu5_35_1", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-
-if (found_app_aliddns() && found_app_ddnsto() && found_app_zerotier() && !found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }, { "title": "menu5_32_2", "link": "Advanced_ddnsto.asp" }, { "title": "menu5_32_1", "link": "Advanced_zerotier.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (found_app_aliddns() && found_app_ddnsto() && !found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }, { "title": "menu5_32_2", "link": "Advanced_ddnsto.asp" }, { "title": "menu5_35_1", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (!found_app_aliddns() && found_app_ddnsto() && found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_ddnsto.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_32_2#>", "link": "Advanced_ddnsto.asp" }, { "title": "menu5_32_1", "link": "Advanced_zerotier.asp" }, { "title": "menu5_35_1", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (found_app_aliddns() && found_app_ddnsto() && found_app_zerotier() && found_app_wireguard()) {
-	var mx = { "title": "<#menu5_30#>", "link": "Advanced_aliddns.asp", index: "17" };
-	var mx2 = [{ "title": "<#menu5_23_1#>", "link": "Advanced_aliddns.asp" }, { "title": "menu5_32_2", "link": "Advanced_ddnsto.asp" }, { "title": "menu5_32_1", "link": "Advanced_zerotier.asp" }, { "title": "menu5_35_1", "link": "Advanced_wireguard.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('17', mx2);
-}
-if (found_app_frp()) {
-	var mx = { "title": "<#menu5_25#>", "link": "Advanced_frp.asp", index: "18" };
-	var mx2 = [{ "title": "<#menu5_25_1#>", "link": "Advanced_frp.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('18', mx2);
-}
-if (found_app_caddy()) {
-	var mx = { "title": "<#menu5_27#>", "link": "Advanced_caddy.asp", index: "19" };
-	var mx2 = [{ "title": "<#menu5_27_1#>", "link": "Advanced_caddy.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('19', mx2);
-}
-if (found_app_wyy()) {
-	var mx = { "title": "<#menu5_31#>", "link": "Advanced_wyy.asp", index: "20" };
-	var mx2 = [{ "title": "<#menu5_31_1#>", "link": "Advanced_wyy.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('20', mx2);
-}
-if (found_app_aldriver()) {
-	var mx = { "title": "<#menu5_36#>", "link": "Advanced_aliyundrive.asp", index: "22" };
-	var mx2 = [{ "title": "<#menu5_36_1#>", "link": "Advanced_aliyundrive.asp" }];
-	menuL2.push(mx);
-	tabMenuHash.put('22', mx2);
-}
-/* plugin menu 插件菜单 结束*/
-
-/* 旧代码兼容/as.asp menu compatibility start */
-var menuL2_title = [];
-var menuL2_link = [];
-var tabtitle = [];
-var tablink = [];
-/* menu compatibility end */
-
-function show_menu(L1, L2, L3) {
-	var $j = jQuery.noConflict(),
-	 	i;
-	if (sw_mode == '3') {
-		//AP模式
-		tabMenuHash.get('3').splice(2, 1);//Remove GWStaticRoute tab menu of LAN Menu
-		tabMenuHash.get('4').splice(0);//Clear All tabmenus of WAN Menu
-		tabMenuHash.get('5').splice(0);//Clear All tabmenus of Firewall Menu
-		tabMenuHash.get('6').splice(3, 1);//Remove Modem tab menu of USBApp Menu
-		tabMenuHash.get('10').splice(1, 4);//Remain LogStatus tab menu of Log Menu
-		menuL2[3].link = ''; //remove WAN Menu
-		menuL2[3].title = ''; //remove WAN Menu
-		menuL2[4].link = ''; //remove Firewall Menu
-		menuL2[4].title = ''; //remove Firewall Menu
-		if (lan_proto == '1') {
-			tabMenuHash.get('3').splice(1, 1);//Remove DHCP tab menu of LAN Menu
-		}
-		var url = "Advanced_APLAN_Content.asp";
-		tabMenuHash.get('3')[0].link = url;//Update tab menu url of LAN Menu
-		menuL2[2].link = url;//Update url of LAN Menu
-	} else {
-		if (sw_mode == '4') {
-			//Route模式
-			tabMenuHash.get('4').splice(2, 2);//Remove 端口映射 (UPnP)/端口转发 (DMZ) tab menus from WAN Menu
-		}
-		if (!support_ipv6()) {
-			tabMenuHash.get('4').splice(1, 1);//Remove IPV6 tab menu from WAN Menu
-		}
-	}
-	//LAN编号 网络信息页
+function show_menu(L1, L2, L3){
+	var i;
 	var num_ephy = support_num_ephy();
 	if (num_ephy < 2)
 		num_ephy = 2;
 	if (num_ephy > 8)
 		num_ephy = 8;
-	for (var i = 0; i < num_ephy; i++) {
-		if (i == 0)
-			tabMenuHash.get('9')[i + 2] = { "title": "WAN", "link": "Main_EStatus_Content.asp#" + i.toString() };
+	if(sw_mode == '3'){
+		tabtitle[2].splice(3,1);//LAN
+		tablink[2].splice(3,1);
+		tabtitle[3].splice(1,5);//WAN
+		tablink[3].splice(1,5);
+		tabtitle[4].splice(1,5);//firewall
+		tablink[4].splice(1,5);
+		tabtitle[5].splice(4,1);//USB
+		tablink[5].splice(4,1);
+		tabtitle[9].splice(2,4);//log
+		tablink[9].splice(2,4);
+		tablink[2][1] = "Advanced_APLAN_Content.asp";
+		menuL2_link[3] = tablink[2][1];
+		menuL2_link[4] = "";  //remove WAN
+		menuL2_title[4] = "";
+		menuL2_link[5] = "";  //remove Firewall
+		menuL2_title[5] = "";
+		menuL1_link[3] = "";  //remove VPN svr
+		menuL1_title[3] = "";
+		menuL1_link[4] = "";  //remove VPN cli
+		menuL1_title[4] = "";
+		
+		if (lan_proto == '1'){
+			tabtitle[2].splice(2,1);
+			tablink[2].splice(2,1);
+		}
+	}else{
+		if(sw_mode == '4'){
+			tablink[3].splice(3,2);
+			tabtitle[3].splice(3,2);
+		}
+		if(!support_ipv6()){
+			tablink[3].splice(2,1);
+			tabtitle[3].splice(2,1);
+		}
+	}
+
+	for (i=0;i<num_ephy;i++){
+		tablink[8][i+3] = "Main_EStatus_Content.asp#"+i.toString();
+		if (i>0)
+			tabtitle[8][i+3] = "LAN"+i.toString();
+	}
+
+	if(num_ephy<8){
+		tabtitle[8].splice(3+num_ephy,8-num_ephy);
+		tablink[8].splice(3+num_ephy,8-num_ephy);
+	}
+
+	if(!support_2g_radio()){
+		menuL2_link[1] = "";  //remove 2G
+		menuL2_title[1] = "";
+		tabtitle[0].splice(1,6);
+		tablink[0].splice(1,6);
+		tabtitle[8].splice(1,1);
+		tablink[8].splice(1,1);
+	}
+
+	if(!support_5g_radio()){
+		menuL2_link[2] = "";  //remove 5GHz
+		menuL2_title[2] = "";
+		tabtitle[1].splice(1,6);
+		tablink[1].splice(1,6);
+		var idx = support_2g_radio() ? 2 : 1;
+		tabtitle[8].splice(idx,1);
+		tablink[8].splice(idx,1);
+	}
+
+	if(!support_storage()){
+		tabtitle[5].splice(1,5);
+		tablink[5].splice(1,5);
+		menuL2_link[6] = "";  //remove USB
+		menuL2_title[6] = "";
+	}else{
+		if(!support_usb()){
+			tabtitle[5].splice(4,2);
+			tablink[5].splice(4,2);
+		}
+		if(!found_app_smbd() && !found_app_ftpd()){
+			tabtitle[5].splice(2,2);
+			tablink[5].splice(2,2);
+		}
+		else if(!found_app_smbd()){
+			tabtitle[5].splice(2,1);
+			tablink[5].splice(2,1);
+		}
+		else if(!found_app_ftpd()){
+			tabtitle[5].splice(3,1);
+			tablink[5].splice(3,1);
+		}
+	}
+
+	for(i = 1; i <= menuL1_title.length-1; i++){
+		if(menuL1_title[i] == "")
+			continue;
+		else if(L1 == i && L2 <= 0)
+			menu1_code += '<li class="active" id="option'+i+'"><a href="javascript:;"><i class="'+menuL1_icon[i]+'"></i>&nbsp;&nbsp;'+menuL1_title[i]+'</a></li>\n';
 		else
-			tabMenuHash.get('9')[i + 2] = { "title": "LAN" + i.toString(), "link": "Main_EStatus_Content.asp#" + i.toString() };
-	}
-	if (num_ephy < 8) {
-		tabMenuHash.get('9').splice(2 + num_ephy, 8 - num_ephy);
+			menu1_code += '<li id="option'+i+'"><a href="'+menuL1_link[i]+'" title="'+menuL1_link[i]+'"><i class="'+menuL1_icon[i]+'"></i>&nbsp;&nbsp;'+menuL1_title[i]+'</a></li>\n';
 	}
 
-	if (!support_2g_radio()) {
-		menuL2[0].title = '';//Remove 2G menu
-		menuL2[0].link = '';//Remove 2G menu
-		tabMenuHash.get('1').splice(0);//Clear all tab menus of 2G Menu
-		tabMenuHash.get('9').splice(0, 1);//Remove 2G info of NetInfo Menu
-	}
+	$("mainMenu").innerHTML = menu1_code;
 
-	if (!support_5g_radio()) {
-		menuL2[1].title = '';//Remove 5G menu
-		menuL2[1].link = '';//Remove 5G menu
-		tabMenuHash.get('2').splice(0);//Clear all tab menus of 5G Menu
-		var idx = support_2g_radio() ? 1 : 0;
-		tabMenuHash.get('9').splice(idx, 1);//Remove 5G info of NetInfo Menu
-	}
-
-	if (!support_storage()) {
-		tabMenuHash.get('6').splice(0);//Clear All tab menus of USBApp Menu
-		menuL2[5].link = '';//Remove USBApp Menu
-		menuL2[5].title = '';//Remove USBApp Menu
-	} else {
-		if (!support_usb()) {
-			tabMenuHash.get('6').splice(3, 2);
-		}
-		if (!found_app_smbd() && !found_app_ftpd()) {
-			tabMenuHash.get('6').splice(1, 2);
-		}
-		else if (!found_app_smbd()) {
-			tabMenuHash.get('6').splice(1, 1);
-		}
-		else if (!found_app_ftpd()) {
-			tabMenuHash.get('6').splice(2, 1);
-		}
-	}
-	//L1
-	var navL1 = "";
-	for (var i = 0; i < menuL1.length; i++) {
-		var title1 = menuL1[i].title;
-		if (title1 == "") { continue; }
-		var link1 = menuL1[i].link;
-		var icon1 = menuL1[i].icon !== "" ? menuL1[i].icon : "";
-
-		if (L1 == (i + 1)) {
-			if (L2 <= 0) link1 = 'javascript:;';
-			navL1 += '<li class="active" id="option' + i + '"><a href="' + link1 + '"><i class="' + icon1 + '"></i>&nbsp;&nbsp;' + title1 + '</a></li>';
-		}
+	for(var i = 1; i <= menuL2_title.length-1; ++i){
+		if(menuL2_title[i] == "")
+			continue;
+		else if(L2 == i)
+			menu2_code += '<a href="javascript: void(0)" style="color: #005580; font-weight: bold"><i class="icon-minus"></i>&nbsp;&nbsp;'+menuL2_title[i]+'</a>\n';
 		else
-			navL1 += '<li id="option' + i + '"><a href="' + link1 + '"><i class="' + icon1 + '"></i>&nbsp;&nbsp;' + title1 + '</a></li>';
+			menu2_code += '<a href="'+menuL2_link[i]+'"><i class="icon-minus"></i>&nbsp;&nbsp;'+menuL2_title[i]+'</a>\n';
 	}
-	$j("#mainMenu").html(navL1);
+	$("subMenu").innerHTML = menu2_code;
 
-	//L2
-	var navL2 = "";
-	for (var i = 0; i < menuL2.length; i++) {
-		var title2 = menuL2[i].title;
-		if (title2 == "") { continue; }
-		var link2 = menuL2[i].link;
-		var icon2 = "icon-minus";
-		if( L2 == menuL2[i].index)
-			navL2 += '<a href="javascript: void(0)" class="current"><i class="' + icon2 + '"></i><b>&nbsp;&nbsp;' + title2 + '</b></a>';
-		else
-			navL2 += '<a href="' + link2 + '"><i class="' + icon2 + '"></i>&nbsp;&nbsp;' + title2 + '</a>';
-	}
-	$j('#subMenu').append(navL2);
-
-	//L3
-	if (L3) {
-		var tab_code = '<ul class="nav nav-tabs" style="margin-bottom: 0px;">';
-		if (tabMenuHash.containsKey(L2)) {
-			var currentTabMenus = tabMenuHash.get(L2);
-			for (var i = 0; i < currentTabMenus.length; ++i) {
-				var title = typeof currentTabMenus[i].title == "undefined" ? "" : currentTabMenus[i].title;
-				if (title == "") { continue; }
-				var link = typeof currentTabMenus[i].link == "undefined" ? "" : currentTabMenus[i].link;
-				if (L3 == (i + 1)) {
-					var tab_ref = (L2 == '9' && i > 0 && link.indexOf("#") > 0) ? link : "javascript: void(0)";
-					tab_code += '<li class="active"><a href="' + tab_ref + '">' + title + '</a></li>';
-				} else
-					tab_code += '<li><a href="' + link + '">' + title + '</a></li>';
-			}
+	if(L3){
+		tab_code = '<ul class="nav nav-tabs" style="margin-bottom: 0px;">\n';
+		for(var i = 1; i < tabtitle[L2-1].length; ++i){
+			if(tabtitle[L2-1][i] == "")
+				continue;
+			if(L3 == i){
+				tab_ref = "javascript: void(0)";
+				if (L2==9 && i>0 && tablink[L2-1][i].indexOf("#")>0)
+					tab_ref = tablink[L2-1][i];
+				tab_code += '<li class="active"><a href="' +tab_ref+ '">'+tabtitle[L2-1][i]+'</a></li>\n';
+			}else
+				tab_code += '<li><a href="' +tablink[L2-1][i]+ '">'+tabtitle[L2-1][i]+'</a></li>\n';
 		}
-		tab_code += '</ul>';
-		$j("#tabMenu").html(tab_code);
+		tab_code += '</ul>\n';
+		$("tabMenu").innerHTML = tab_code;
 	}
 	else
-		$j("#tabMenu").html("");
-
-	if (L1 == "7" && L2 == "0" && L3 == "0") {
-		/* 旧代码兼容/as.asp menu compatibility start */
-		for (var i = 0; i < menuL2.length; i++) {
-			menuL2_title[i] = menuL2[i].title;
-			menuL2_link[i] = menuL2[i].link;
-		}
-		var tabKeys = tabMenuHash.keySet();
-		var tabKey, tabMenus;
-		for (var i = 0; i < tabKeys.length; i++) {
-			tabKey = tabKeys[i];
-			tabMenus = tabMenuHash.get(tabKey);
-			tabtitle[i] = [];
-			tabtitle[i][0] = "";
-			tablink[i] = [];
-			tablink[i][0] = "";
-			for (var j = 0; j < tabMenus.length; j++) {
-				tablink[i][j + 1] = tabMenus[j].link;
-				tabtitle[i][j + 1] = tabMenus[j].title;
-			}
-		}
-		/* menu compatibility end */
-	}
+		$("tabMenu").innerHTML = "";
 }
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
 function show_footer() {
 	footer_code = '<div align="center" class="bottom-image"></div>\n';
 	footer_code +='<div align="center" class="copyright"><#footer_copyright_desc#></div>\n';
