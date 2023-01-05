@@ -36,68 +36,6 @@ var cookie = {
 	}
 };
 
-function HashMap() {
-	var length = 0;
-	var obj = new Object();
-	this.isEmpty = function () {
-		return length == 0;
-	};
-
-	this.containsKey = function (key) {
-		return (key in obj);
-	};
-
-	this.containsValue = function (value) {
-		for (var key in obj) {
-			if (obj[key] == value) {
-				return true;
-			}
-		}
-		return false;
-	};
-
-	this.put = function (key, value) {
-		if (!this.containsKey(key)) {
-			length++;
-		}
-		obj[key] = value;
-	};
-
-	this.get = function (key) {
-		return this.containsKey(key) ? obj[key] : null;
-	};
-
-	this.remove = function (key) {
-		if (this.containsKey(key) && (delete obj[key])) {
-			length--;
-		}
-	};
-
-	this.values = function () {
-		var _values = new Array();
-		for (var key in obj) {
-			_values.push(obj[key]);
-		}
-		return _values;
-	};
-
-	this.keySet = function () {
-		var _keys = new Array();
-		for (var key in obj) {
-			_keys.push(key);
-		}
-		return _keys;
-	};
-
-	this.size = function () {
-		return length;
-	};
-
-	this.clear = function () {
-		length = 0;
-		obj = new Object();
-	};
-}
 <% firmware_caps_hook(); %>
 
 	function get_ap_mode() {
@@ -292,7 +230,6 @@ var enabledBtnCommit = '<% nvram_match_x("","nvram_manual", "0", "display:none;"
 
 // L3 = The third Level of Menu
 function show_banner(L3) {
-	var $j = jQuery.noConflict();
 	var bc = '',
 		style_2g = 'width:55px;',
 		style_5g = 'width:55px;';
@@ -441,7 +378,7 @@ function show_banner(L3) {
 	show_loading_obj();
 	show_top_status();
 }
-
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000
 //new MENU 2021-1-2 17:47 by xtr3mz
 var tabM0 = [
 	{ "title": "<#menu5_1_1#>", "link": "Advanced_Wireless2g_Content.asp" },
@@ -899,18 +836,17 @@ function show_menu(L1, L2, L3) {
 		/* menu compatibility end */
 	}
 }
-
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 function show_footer() {
-	var $j = jQuery.noConflict();
-	var footer_code = '<div align="center" class="bottom-image"></div>\n';
-	footer_code += '<div align="center" class="copyright"><#footer_copyright_desc#></div>\n';
-	footer_code += '<div align="center">\n';
-	footer_code += '  <span>Highcharts by Torstein Hønsi & <a href="http://www.highcharts.com">Highsoft</a></span></br>\n';
-	footer_code += '  <span>Big icons designed by <a href="http://www.freepik.com">Freepik</a></br></span>\n';
-	footer_code += '  <span>Non-Commercial Use Only</span></br>\n';
-	footer_code += '</div>\n';
+	footer_code = '<div align="center" class="bottom-image"></div>\n';
+	footer_code +='<div align="center" class="copyright"><#footer_copyright_desc#></div>\n';
+	footer_code +='<div align="center">\n';
+	footer_code +='  <span>Highcharts by Torstein Hønsi & <a href="http://www.highcharts.com">Highsoft</a></span></br>\n';
+	footer_code +='  <span>Big icons designed by <a href="http://www.freepik.com">Freepik</a></br></span>\n';
+	footer_code +='  <span>Non-Commercial Use Only</span></br>\n';
+	footer_code +='</div>\n';
 
-	$j("#footer").html(footer_code);
+	$("footer").innerHTML = footer_code;
 
 	flash_button();
 }
@@ -969,11 +905,12 @@ function checkTime(i) {
 }
 
 function show_loading_obj() {
-	var $j = jQuery.noConflict();
-	var code = '<center><div id="loadingBlock" class="loadingBlock">';
+	var code = '';
+
+	code += '<center><div id="loadingBlock" class="loadingBlock">';
 	code += '<div class="container-fluid">';
-	code += '<div class="well">';
-	code += '<div class="progress progress-striped active"><div class="bar" id="proceeding_bar"><span id="proceeding_txt"></span></div></div>';
+	code += '<div class="well" style="background-color: #212121; width: 60%;">';
+	code += '<div class="progress progress-striped active" style="width: 50%; text-align: left;"><div class="bar" id="proceeding_bar" style="width: 0%;"><span id="proceeding_txt"></span></div></div>';
 	code += '<span id="proceeding_main_txt"><#Main_alert_proceeding_desc4#></span></span>';
 	code += '</div>';
 	code += '</div>';
@@ -1125,7 +1062,7 @@ function simpleNum3(num) {
 }
 
 function $() {
-	var elements = [];
+	var elements = new Array();
 
 	for (var i = 0; i < arguments.length; ++i) {
 		var element = arguments[i];
@@ -1146,10 +1083,10 @@ function E(e) {
 }
 
 function getElementsByName_iefix(tag, name) {
-	var tagObjs = document.getElementsByTagName(tag),
-		objsName,
-		targetObjs = [],
-		targetObjs_length;
+	var tagObjs = document.getElementsByTagName(tag);
+	var objsName;
+	var targetObjs = new Array();
+	var targetObjs_length;
 
 	if (!(typeof (name) == "string" && name.length > 0))
 		return [];
@@ -1317,11 +1254,12 @@ function validate_psk(psk_obj) {
 }
 
 function checkDuplicateName(newname, targetArray) {
-	var existing_string = targetArray.join(','),
-		existing_string = "," + existing_string + ",",
-		newstr = "," + trim(newname) + ",",
-		re = new RegExp(newstr, "gi"),
-		matchArray = existing_string.match(re);
+	var existing_string = targetArray.join(',');
+	existing_string = ","+existing_string+",";
+	var newstr = ","+trim(newname)+",";
+	
+	var re = new RegExp(newstr, "gi");
+	var matchArray = existing_string.match(re);
 
 	if (matchArray != null)
 		return true;
@@ -1442,21 +1380,6 @@ function blocking(obj_id, show) {
 
 function inputCtrl(obj, flag) {
 	obj.disabled = (flag == 0);
-}
-
-function IsPC() {
-	var userAgentInfo = navigator.userAgent;
-	var Agents = ["Android", "iPhone",
-		"SymbianOS", "Windows Phone",
-		"iPad", "iPod"];
-	var flag = true;
-	for (var v = 0; v < Agents.length; v++) {
-		if (userAgentInfo.indexOf(Agents[v]) > 0) {
-			flag = false;
-			break;
-		}
-	}
-	return flag;
 }
 
 // add eagle23
@@ -1665,83 +1588,58 @@ var w_ai = '<% nvram_get_x("", "w_ai"); %>',
 	w_adbyby = '<% nvram_get_x("", "w_adbyby"); %>',
 	w_pdnsd = '<% nvram_get_x("", "w_pdnsd"); %>';
 
-jQuery.each(menuL1, function (i, m) {
-	var hidden = false;
-	if (w_vpn_s === '0' && m.icon == 'icon-retweet') {
-		hidden = true;
-	}
-	else if (w_vpn_c === '0' && m.icon == 'icon-globe') {
-		hidden = true;
-	}
-	else if (w_wnet === '0' && m.icon == 'icon-tasks') {
-		hidden = true;
-	}
-	else if (w_sys === '0' && m.icon == 'icon-random') {
-		hidden = true;
-	}
-	if (hidden) {
-		m.title = '';
-		m.link = '';
-	}
-});
-jQuery.each(menuL2, function (i, m) {
-	var hidden = false;
-	if (w_usb === '0' && m.index == '6') {
-		hidden = true;
-	}
-	else if (w_net === '0' && m.index == '9') {
-		hidden = true;
-	}
-	else if (w_log === '0' && m.index == '10') {
-		hidden = true;
-	}
-	else if (w_scu === '0' && m.index == '11') {
-		hidden = true;
-	}
-	else if (w_dnsf === '0' && m.index == '12') {
-		hidden = true;
-	}
-	else if (w_ss === '0' && m.index == '13') {
-		hidden = true;
-	}
-	else if (w_men === '0' && m.index == '14') {
-		hidden = true;
-	}
-	else if (w_adbyby === '0' && m.index == '15') {
-		hidden = true;
-	}
-	else if (w_pdnsd === '0' && m.index == '16') {
-		hidden = true;
-	}
-	if (hidden) {
-		m.title = '';
-		m.link = '';
-	}
-});
-
-function mobilestyle() {
-	var sc = document.createElement("meta");
-	sc.setAttribute("name", "viewport");
-	sc.setAttribute("content", "width=device-width, initial-scale=1, user-scalable=yes");
-	document.head.appendChild(sc);
-
-	$j = jQuery.noConflict();
-	setTimeout(function () {
-		if ($j(window).width() < 800) {//body 加载晚
-			var qc = "";
-			$j('.table-big tr').each(function () {
-				var o = $j(this);
-				qc += '<div class="sub" id="' + o.attr('id') + '" style="' + o.attr('style') + '">' + $j('td', o).html() + '</div>';
-			});
-			$j('<div class="quickmenu">' + qc + '</div>').insertBefore("#tabMenu");
-			$j('.table-big').remove();
-
-			$j('#net_chart,#cpu_chart').parents("table").parent().addClass('chart-parent');
-
-		}
-	}, 500);
+if (w_ai==0){
+	menuL1_link[2] = "";
+	menuL1_title[2] = "";
 }
-
+if (w_vpn_s==0){
+	menuL1_link[3] = "";
+	menuL1_title[3] = "";
+}
+if (w_vpn_c==0){
+	menuL1_link[4] = "";
+	menuL1_title[4] = "";
+}
+if (w_wnet==0){
+	menuL1_link[5] = "";
+	menuL1_title[5] = "";
+}
+if (w_sys==0){
+	menuL1_link[6] = "";
+	menuL1_title[6] = "";
+}
+if (w_usb==0){
+	menuL2_link[6] = "";
+	menuL2_title[6] = "";
+}
+if (w_net==0){
+	menuL2_link[9] = "";
+	menuL2_title[9] = "";
+}
+if (w_log==0){
+	menuL2_link[10] = "";
+	menuL2_title[10] = "";
+}
+if (w_scu==0){
+	menuL2_link[11] = "";
+	menuL2_title[11] = "";
+}
+if (w_dnsf==0){
+	menuL2_link[12] = "";
+	menuL2_title[12] = "";
+}
+if (w_ss==0){
+	menuL2_link[13] = "";
+	menuL2_title[13] = "";
+}
+if (w_men==0){
+	menuL2_link[14] = "";
+	menuL2_title[14] = "";
+}
+if (w_adbyby==0){
+	menuL2_link[15] = "";
+	menuL2_title[15] = "";
+}
 (function ($) {
 	var $j = $.noConflict();
 	$j.fn.tabSlideOut = function (callerSettings) {
@@ -1915,5 +1813,4 @@ function mobilestyle() {
 			hoverAction();
 		}
 	};
-	mobilestyle();
 })(jQuery);
