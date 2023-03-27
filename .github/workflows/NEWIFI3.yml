@@ -67,7 +67,6 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SHADOWSOCKS
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #v2ray执行文件
-        echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #xray执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #trojan执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> .config #simple-obfs混淆插件
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config #adbyby plus+
